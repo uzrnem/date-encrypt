@@ -12,6 +12,7 @@
     "encrypt",
     "decrypt"
   ],
+  "repository": "https://github.com/uzrnem/date-encrypt",
   "author": "Bhagyesh Sunil Patel",
   "license": "ISC"
 }
