@@ -37,3 +37,15 @@ var enD = dateEncrypt.encryptDate(dt)
 console.log("encryptDate: ", enD)
 console.log("decryptDate: ", dateEncrypt.decryptDate(enD))
 ```
+
+## Project
+Here is Link [Github].
+
+Author
+
+* [Bhagyesh Sunil Patel]
+
+[//]: # (These are reference links used in the body of this note)
+
+   [Bhagyesh Sunil Patel]: <https://www.linkedin.com/in/uzrnem>
+   [Github]: <https://github.com/uzrnem/date-encrypt>
