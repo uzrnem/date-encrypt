@@ -1,0 +1,17 @@
+{
+  "name": "date-encrypt",
+  "version": "1.0.1",
+  "description": "Encrypt and Decrypt Date",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "date",
+    "encrypt",
+    "decrypt"
+  ],
+  "author": "Bhagyesh Sunil Patel",
+  "license": "ISC"
+}
