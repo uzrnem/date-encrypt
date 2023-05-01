@@ -1,6 +1,6 @@
 {
   "name": "date-encrypt",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Encrypt and Decrypt Date",
   "main": "index.js",
   "scripts": {
