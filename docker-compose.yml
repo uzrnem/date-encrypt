@@ -1,0 +1,16 @@
+# For Development: docker compose --profile dev up
+# For Testing: docker compose --profile test up
+# COMPOSE_PROFILES=frontend,debug docker compose up
+# docker compose --profile dev --profile test up
+version: "3.7"
+
+services:
+  date:
+    image: node:21.6.1-bullseye
+    working_dir: /app
+    container_name: date
+    volumes:
+      - $PWD:/app
+    command: tail -f /dev/null
+    ports:
+      - 6000:6000

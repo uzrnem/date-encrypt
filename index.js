@@ -1,6 +1,7 @@
 const date_arr = ["C", "J", "L", "8", "5", "B", "R", "0", "D", "Z", "F", "Y", "M", "1", "W", "T", "9", "O", "Q", "G", "S", "A", "K", "V", "U", "P", "4", "X", "6", "7", "H"];
 const hour_arr = ["E", "H", "J", "B", "N", "D", "F", "A", "R", "U", "P", "M", "C", "T", "Y", "Z", "O", "S", "W", "Q", "K", "V", "L", "X"];
 const minsec_arr = ["Y", "g", "v", "b", "U", "F", "z", "V", "x", "e", "w", "3", "L", "Z", "O", "9", "d", "h", "D", "6", "1", "p", "r", "t", "X", "P", "R", "C", "c", "5", "q", "G", "K", "u", "0", "n", "T", "o", "a", "k", "7", "2", "H", "4", "B", "Q", "M", "S", "E", "m", "N", "8", "A", "y", "j", "J", "i", "s", "W", "f"];
+const compack = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ !\"#$%&'()*+,-./:;<=>?@[\\]^_`{}~£¥¼½¾¿abcdefghijklmnopqrstuvwxyz";
 
 exports.encryptFullDate = function(date) {
   var fy = date.getFullYear();
@@ -44,5 +45,28 @@ exports.decryptDate = function(str) {
     hour_arr.indexOf(str.charAt(1)),
     minsec_arr.indexOf(str.charAt(2)),
     minsec_arr.indexOf(str.charAt(3))
+  )
+}
+
+exports.encryptCompackDate = function(date) {
+  var fy = date.getYear() % 100;
+  var mn = date.getMonth();
+  var dt = date.getDate();
+  return `${compack.charAt(fy)}${compack.charAt(mn)}${compack.charAt(dt)}`;
+}
+
+exports.decryptCompackDate = function(str) {
+  var year = compack.indexOf(str.charAt(0));
+  if (year > 50) {
+    year += 1900
+  } else {
+    year += 2000
+  }
+  var month = compack.indexOf(str.charAt(1));
+  var date = compack.indexOf(str.charAt(2));
+  return new Date(
+    year,
+    month,
+    date
   )
 }
